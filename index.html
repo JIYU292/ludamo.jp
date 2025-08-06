@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>关于婚姻</title>
+    <title>結婚について</title>
     <style>
         /* --- 全局样式 --- */
         body {
-            font-family: 'Georgia', 'Times New Roman', 'KaiTi', 'STSong', serif;
+            font-family: 'Georgia', 'Times New Roman', 'Hiragino Mincho ProN', 'MS PMincho', serif;
             margin: 0;
             padding: 0;
             background-color: #fdfdfd; /* 纯净的白色背景 */
@@ -161,6 +161,7 @@
             padding: 10px 40px;
             position: relative;
             width: 50%;
+            box-sizing: border-box; /* 确保 padding 不会影响宽度计算 */
         }
 
         .timeline-item:nth-child(odd) {
@@ -180,7 +181,6 @@
             position: absolute;
             width: 16px;
             height: 16px;
-            right: -8px;
             background-color: white;
             border: 3px solid #8d6e63; /* 中度棕色 */
             top: 28px;
@@ -233,6 +233,7 @@
         }
         .footer p {
             margin: 0;
+            padding: 5px 0;
         }
         
         /* --- 响应式设计 --- */
@@ -254,6 +255,7 @@
             }
             .timeline-item::after {
                 left: 12px !important;
+                right: auto !important;
             }
         }
     </style>
@@ -262,30 +264,30 @@
 
     <header class="header">
         <div class="header-content">
-            <h1>婚姻：一场共同的旅程</h1>
+            <h1>結婚：共に歩む旅</h1>
         </div>
     </header>
 
     <main>
         <section class="content-section">
             <div class="container">
-                <h2 class="section-title">婚姻的基石</h2>
+                <h2 class="section-title">結婚の礎</h2>
                 <div class="pillars-grid">
                     <div class="pillar-card">
-                        <h3>伙伴关系</h3>
-                        <p>婚姻是终身的伙伴关系。是两个独立个体的携手，互为港湾，也共担风雨。</p>
+                        <h3>パートナーシップ</h3>
+                        <p>結婚とは生涯にわたるパートナーシップです。二人の独立した個人が手を取り合い、互いの安らぎの港となり、嵐を共に乗り越えることです。</p>
                     </div>
                     <div class="pillar-card">
-                        <h3>共同成长</h3>
-                        <p>最好的婚姻，不是你望着我，我望着你，而是一起望着同一个方向，彼此成就，共同进步。</p>
+                        <h3>共に成長する</h3>
+                        <p>最高の結婚とは、あなたと私が見つめ合うことではなく、共に同じ方向を見つめ、お互いを高め合い、共に前進することです。</p>
                     </div>
                     <div class="pillar-card">
-                        <h3>无悔承诺</h3>
-                        <p>一纸婚书承载的是“无论贫穷富贵、健康疾病”都相守的决心，是选择，也是责任。</p>
+                        <h3>悔いなき約束</h3>
+                        <p>一枚の婚姻届は、「富める時も貧しき時も、健やかなる時も病める時も」共にいるという決意を乗せたものであり、選択であり、責任でもあります。</p>
                     </div>
                     <div class="pillar-card">
-                        <h3>深刻理解</h3>
-                        <p>超越言语的默契，接纳彼此的不完美。是在漫长岁月中，依然能读懂对方眼神的温柔。</p>
+                        <h3>深い理解</h3>
+                        <p>言葉を超えた暗黙の了解、お互いの不完全さを受け入れること。長い年月を経ても、相手の眼差しにある優しさを読み取れることです。</p>
                     </div>
                 </div>
             </div>
@@ -294,38 +296,38 @@
         <section class="quote-section">
             <div class="container">
                 <div class="quote">
-                    <blockquote>“幸福的婚姻，不过是找到了一个愿意听你说一辈子废话的人。”</blockquote>
-                    <footer>—— 未知</footer>
+                    <blockquote>「幸せな結婚とは、一生自分の無駄話を聞いてくれる人を見つけることにすぎない。」</blockquote>
+                    <footer>—— 作者不詳</footer>
                 </div>
             </div>
         </section>
 
         <section class="content-section">
              <div class="container">
-                <h2 class="section-title">爱的篇章</h2>
+                <h2 class="section-title">愛の章</h2>
                 <div class="timeline">
                     <div class="timeline-item">
                         <div class="timeline-content">
-                            <h3>怦然心动</h3>
-                            <p>故事的开始，是人群中多看的那一眼，从此，世界因你而不同。</p>
+                            <h3>心ときめく出会い</h3>
+                            <p>物語の始まりは、人混みの中で交わしたあの眼差し。その瞬間から、世界はあなたによって色鮮やかに変わりました。</p>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-content">
-                            <h3>热恋与磨合</h3>
-                            <p>激情燃烧的岁月，伴随着观念的碰撞。我们学会包容，找到最舒适的相处之道。</p>
+                            <h3>熱愛とすり合わせ</h3>
+                            <p>情熱が燃え上がる日々には、価値観の衝突も伴います。私たちは受け入れることを学び、最も心地よい付き合い方を見つけ出しました。</p>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-content">
-                            <h3>郑重承诺</h3>
-                            <p>在亲友的见证下，交换戒指，许下誓言。将“我”变成“我们”。</p>
+                            <h3>厳粛な誓い</h3>
+                            <p>親しい友人や家族に見守られながら、指輪を交換し、誓いの言葉を交わす。「私」が「私たち」になる瞬間です。</p>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-content">
-                            <h3>岁月静好</h3>
-                            <p>爱意沉淀在柴米油盐的日常里。是清晨的问候，是深夜的等待，是平淡却安心的相守。</p>
+                            <h3>穏やかな日々</h3>
+                            <p>愛情は日々の暮らしの中に溶け込んでいきます。朝の挨拶、深夜の待ちわびる時間、平凡だけれども心安らぐ寄り添いです。</p>
                         </div>
                     </div>
                 </div>
@@ -334,19 +336,19 @@
 
         <section class="content-section" style="background-color: #f9f6f4;">
             <div class="container">
-                <h2 class="section-title">相守的瞬间</h2>
+                <h2 class="section-title">寄り添う瞬間</h2>
                 <div class="gallery-grid">
-                    <img src="https://images.unsplash.com/photo-1549925233-289737525f15?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="婚礼上交换戒指的特写" class="gallery-image">
-                    <img src="https://images.unsplash.com/photo-1572076893478-fde50a41d9c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="一对夫妻在厨房里一起做饭" class="gallery-image">
-                    <img src="https://images.unsplash.com/photo-1621235312380-3c72633b6c23?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="一对年迈的夫妇牵手散步的背影" class="gallery-image">
+                    <img src="https://images.unsplash.com/photo-1549925233-289737525f15?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="結婚式で指輪を交換するクローズアップ" class="gallery-image">
+                    <img src="https://images.unsplash.com/photo-1572076893478-fde50a41d9c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="キッチンで一緒に料理をする夫婦" class="gallery-image">
+                    <img src="https://images.unsplash.com/photo-1621235312380-3c72633b6c23?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="手をつないで散歩する老夫婦の後ろ姿" class="gallery-image">
                 </div>
             </div>
         </section>
     </main>
 
     <footer class="footer">
-        <p>愿得一人心，白首不相离。</p>
-        <p>&copy; 2025 共同的旅程. 保留所有权利。</p>
+        <p>願わくは一人の心を得て、白髪になるまで離れぬことを。</p>
+        <p>&copy; 2025 共に歩む旅. All rights reserved.</p>
     </footer>
 
 </body>
