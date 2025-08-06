@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于婚姻</title>
+    <style>
+        /* --- 全局样式 --- */
+        body {
+            font-family: 'Georgia', 'Times New Roman', 'KaiTi', 'STSong', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fdfdfd; /* 纯净的白色背景 */
+            color: #4a4a4a; /* 柔和的深灰色 */
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            font-weight: normal;
+            color: #5d4037; /* 温暖的棕色 */
+        }
+
+        /* --- 头部 --- */
+        .header {
+            background-image: url('https://images.unsplash.com/photo-1597157639073-69284958a055?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80');
+            background-size: cover;
+            background-position: center 60%;
+            height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(40, 40, 40, 0.4); /* 添加一层柔和的暗色滤镜以突出文字 */
+        }
+
+        .header-content {
+            z-index: 1;
+        }
+
+        .header h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            color: white;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-shadow: 1px 1px 8px rgba(0,0,0,0.6);
+        }
+
+        /* --- 内容区域通用样式 --- */
+        .content-section {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '§';
+            display: block;
+            color: #a1887f; /* 浅棕色 */
+            font-size: 1.5rem;
+            margin-top: 5px;
+        }
+
+        /* --- 基石卡片 --- */
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .pillar-card {
+            background: #f9f6f4; /* 非常浅的米色 */
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+            padding: 30px 25px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(93, 64, 55, 0.1);
+        }
+
+        .pillar-card h3 {
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .pillar-card p {
+            font-size: 0.95rem;
+            color: #6d6d6d;
+        }
+
+        /* --- 箴言部分 --- */
+        .quote-section {
+            background-color: #f1f1f1;
+            padding: 70px 20px;
+            text-align: center;
+        }
+
+        .quote blockquote {
+            font-size: 1.5rem;
+            font-style: italic;
+            max-width: 750px;
+            margin: 0 auto 20px;
+            border: none;
+            padding: 0;
+            color: #333;
+        }
+
+        .quote footer {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #5d4037;
+        }
+        
+        /* --- 爱的篇章 (时间轴) --- */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background-color: #d7ccc8; /* 浅灰褐色 */
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -1px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            padding-right: 60px;
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            padding-left: 60px;
+            text-align: left;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            right: -8px;
+            background-color: white;
+            border: 3px solid #8d6e63; /* 中度棕色 */
+            top: 28px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .timeline-item:nth-child(odd)::after {
+            right: -8px;
+        }
+        
+        .timeline-item:nth-child(even)::after {
+            left: -8px;
+        }
+
+        .timeline-content {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .timeline-content h3 { margin-top: 0; }
+        
+        /* --- 相册 --- */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+        }
+        .gallery-image {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+        .gallery-image:hover {
+            transform: scale(1.03);
+            filter: brightness(1.1);
+        }
+        
+        /* --- 页脚 --- */
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #5d4037; /* 温暖的棕色 */
+            color: #e0e0e0;
+            font-size: 0.9rem;
+        }
+        .footer p {
+            margin: 0;
+        }
+        
+        /* --- 响应式设计 --- */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5rem;
+            }
+            .timeline::before {
+                left: 20px;
+            }
+            .timeline-item {
+                width: 100%;
+                padding-left: 60px;
+                padding-right: 20px;
+                text-align: left !important;
+            }
+            .timeline-item:nth-child(odd), .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            .timeline-item::after {
+                left: 12px !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-content">
+            <h1>婚姻：一场共同的旅程</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="content-section">
+            <div class="container">
+                <h2 class="section-title">婚姻的基石</h2>
+                <div class="pillars-grid">
+                    <div class="pillar-card">
+                        <h3>伙伴关系</h3>
+                        <p>婚姻是终身的伙伴关系。是两个独立个体的携手，互为港湾，也共担风雨。</p>
+                    </div>
+                    <div class="pillar-card">
+                        <h3>共同成长</h3>
+                        <p>最好的婚姻，不是你望着我，我望着你，而是一起望着同一个方向，彼此成就，共同进步。</p>
+                    </div>
+                    <div class="pillar-card">
+                        <h3>无悔承诺</h3>
+                        <p>一纸婚书承载的是“无论贫穷富贵、健康疾病”都相守的决心，是选择，也是责任。</p>
+                    </div>
+                    <div class="pillar-card">
+                        <h3>深刻理解</h3>
+                        <p>超越言语的默契，接纳彼此的不完美。是在漫长岁月中，依然能读懂对方眼神的温柔。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="quote-section">
+            <div class="container">
+                <div class="quote">
+                    <blockquote>“幸福的婚姻，不过是找到了一个愿意听你说一辈子废话的人。”</blockquote>
+                    <footer>—— 未知</footer>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+             <div class="container">
+                <h2 class="section-title">爱的篇章</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>怦然心动</h3>
+                            <p>故事的开始，是人群中多看的那一眼，从此，世界因你而不同。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>热恋与磨合</h3>
+                            <p>激情燃烧的岁月，伴随着观念的碰撞。我们学会包容，找到最舒适的相处之道。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>郑重承诺</h3>
+                            <p>在亲友的见证下，交换戒指，许下誓言。将“我”变成“我们”。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>岁月静好</h3>
+                            <p>爱意沉淀在柴米油盐的日常里。是清晨的问候，是深夜的等待，是平淡却安心的相守。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" style="background-color: #f9f6f4;">
+            <div class="container">
+                <h2 class="section-title">相守的瞬间</h2>
+                <div class="gallery-grid">
+                    <img src="https://images.unsplash.com/photo-1549925233-289737525f15?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="婚礼上交换戒指的特写" class="gallery-image">
+                    <img src="https://images.unsplash.com/photo-1572076893478-fde50a41d9c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="一对夫妻在厨房里一起做饭" class="gallery-image">
+                    <img src="https://images.unsplash.com/photo-1621235312380-3c72633b6c23?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="一对年迈的夫妇牵手散步的背影" class="gallery-image">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>愿得一人心，白首不相离。</p>
+        <p>&copy; 2025 共同的旅程. 保留所有权利。</p>
+    </footer>
+
+</body>
+</html>
